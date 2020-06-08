@@ -3234,7 +3234,7 @@
         <Property Name="keyCredentials" Type="Collection(graph.keyCredential)" Nullable="false">
           <Annotation Term="Org.OData.Core.V1.Description" String="The collection of key credentials associated with the application Not nullable." />
         </Property>
-        <Property Name="logo" Type="Edm.Stream" Nullable="false">
+        <Property Name="content" Type="Edm.Stream" Nullable="false">
           <Annotation Term="Org.OData.Core.V1.Description" String="The main logo for the application. Not nullable." />
         </Property>
         <Property Name="oauth2RequirePostResponse" Type="Edm.Boolean" Nullable="false" />
