@@ -5530,7 +5530,7 @@
         <Property Name="webDavUrl" Type="Edm.String">
           <Annotation Term="Org.OData.Core.V1.Description" String="WebDAV compatible URL for the item." />
         </Property>
-        <NavigationProperty Name="workbook" Type="graph.workbook" ContainsTarget="true">
+        <NavigationProperty Name="workbook" Type="graph.workbook">
           <Annotation Term="Org.OData.Core.V1.Description" String="For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable." />
         </NavigationProperty>
         <NavigationProperty Name="analytics" Type="graph.itemAnalytics">
