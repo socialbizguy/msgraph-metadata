@@ -327,6 +327,7 @@
         <Parameter Name="bindingParameter" Type="Collection(graph.site)" />
         <ReturnType Type="Collection(graph.site)" />
       </Function>
+      <Singleton Name="workbook" Type="graph.workbook" />
     </Schema>
     <Schema Namespace="microsoft.graph.callRecords" xmlns="http://docs.oasis-open.org/odata/ns/edm">
       <EnumType Name="callType">

@@ -87,6 +87,16 @@
       </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="edm:Schema[@Namespace='microsoft.graph']">
+      <xsl:copy>
+        <xsl:apply-templates select="@* | node()"/>
+        <xsl:element name="Singleton">
+        <xsl:attribute name="Name">workbook</xsl:attribute>
+        <xsl:attribute name="Type">graph.workbook</xsl:attribute>
+        </xsl:element>
+      </xsl:copy>
+    </xsl:template>
+
     <!-- Remove Property -->
 
     <xsl:template match="edm:Schema[@Namespace='microsoft.graph']/edm:ComplexType[@Name='changeNotification']/edm:Property[@Name='sequenceNumber']"/>
