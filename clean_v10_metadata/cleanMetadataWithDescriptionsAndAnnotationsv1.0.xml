@@ -6765,7 +6765,7 @@
         <NavigationProperty Name="listItem" Type="graph.listItem" ContainsTarget="true" />
         <NavigationProperty Name="permission" Type="graph.permission" ContainsTarget="true" />
         <NavigationProperty Name="root" Type="graph.driveItem" />
-        <NavigationProperty Name="site" Type="graph.site" ContainsTarget="true" />
+        <NavigationProperty Name="site" Type="graph.site" />
       </EntityType>
       <ComplexType Name="extensionSchemaProperty">
         <Property Name="name" Type="Edm.String" />
@@ -26994,33 +26994,32 @@
       <Annotations Target="microsoft.graph.disconnect(microsoft.graph.remoteAssistancePartner)">
         <Annotation Term="Org.OData.Core.V1.Description" String="A request to remove the active TeamViewer connector" />
       </Annotations>
-      <Annotations Target="microsoft.graph.user/drive">
+      <Annotations Target="microsoft.graph.user/drives">
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
-            <PropertyValue Property="Navigability">
-              <EnumMember>Org.OData.Capabilities.V1.NavigationType/Single</EnumMember>
+            <PropertyValue Property="RestrictedProperties">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="IndexableByKey" Bool="false" />
+                </Record>
+              </Collection>
             </PropertyValue>
           </Record>
         </Annotation>
       </Annotations>
-      <Annotations Target="microsoft.graph.group/drive">
+      <Annotations Target="microsoft.graph.group/drives">
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
-            <PropertyValue Property="Navigability">
-              <EnumMember>Org.OData.Capabilities.V1.NavigationType/Single</EnumMember>
+            <PropertyValue Property="RestrictedProperties">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="IndexableByKey" Bool="false" />
+                </Record>
+              </Collection>
             </PropertyValue>
           </Record>
         </Annotation>
-      </Annotations>
-      <Annotations Target="microsoft.graph.sharedDriveItem/site">
-        <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
-          <Record>
-            <PropertyValue Property="Navigability">
-              <EnumMember>Org.OData.Capabilities.V1.NavigationType/Single</EnumMember>
-            </PropertyValue>
-          </Record>
-        </Annotation>
-      </Annotations>
+      </Annotations>      
       <Annotations Target="microsoft.graph.driveItem/workbook">
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
