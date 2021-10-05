@@ -26994,7 +26994,7 @@
       <Annotations Target="microsoft.graph.disconnect(microsoft.graph.remoteAssistancePartner)">
         <Annotation Term="Org.OData.Core.V1.Description" String="A request to remove the active TeamViewer connector" />
       </Annotations>
-      <Annotations Target="microsoft.graph.user/drives">
+      <Annotations Target="microsoft.graph.user/drive">
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
             <PropertyValue Property="RestrictedProperties">
@@ -27007,7 +27007,7 @@
           </Record>
         </Annotation>
       </Annotations>
-      <Annotations Target="microsoft.graph.group/drives">
+      <Annotations Target="microsoft.graph.group/drive">
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
             <PropertyValue Property="RestrictedProperties">
