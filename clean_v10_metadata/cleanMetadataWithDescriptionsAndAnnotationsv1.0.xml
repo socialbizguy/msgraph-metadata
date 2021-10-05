@@ -26998,7 +26998,7 @@
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
             <PropertyValue Property="Navigability">
-              <EnumMember>Org.OData.Capabilities.V1.NavigationType/None</EnumMember>
+              <EnumMember>Org.OData.Capabilities.V1.NavigationType/Single</EnumMember>
             </PropertyValue>
           </Record>
         </Annotation>
@@ -27007,7 +27007,7 @@
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
             <PropertyValue Property="Navigability">
-              <EnumMember>Org.OData.Capabilities.V1.NavigationType/None</EnumMember>
+              <EnumMember>Org.OData.Capabilities.V1.NavigationType/Single</EnumMember>
             </PropertyValue>
           </Record>
         </Annotation>
@@ -27016,7 +27016,7 @@
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
             <PropertyValue Property="Navigability">
-              <EnumMember>Org.OData.Capabilities.V1.NavigationType/None</EnumMember>
+              <EnumMember>Org.OData.Capabilities.V1.NavigationType/Single</EnumMember>
             </PropertyValue>
           </Record>
         </Annotation>
