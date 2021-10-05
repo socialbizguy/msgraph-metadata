@@ -6765,7 +6765,7 @@
         <NavigationProperty Name="listItem" Type="graph.listItem" ContainsTarget="true" />
         <NavigationProperty Name="permission" Type="graph.permission" ContainsTarget="true" />
         <NavigationProperty Name="root" Type="graph.driveItem" />
-        <NavigationProperty Name="site" Type="graph.site" />
+        <NavigationProperty Name="site" Type="graph.site" ContainsTarget="true" />
       </EntityType>
       <ComplexType Name="extensionSchemaProperty">
         <Property Name="name" Type="Edm.String" />
@@ -27019,7 +27019,20 @@
             </PropertyValue>
           </Record>
         </Annotation>
-      </Annotations>      
+      </Annotations>
+      <Annotations Target="microsoft.graph.sharedDriveItem/site">
+        <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
+          <Record>
+            <PropertyValue Property="RestrictedProperties">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="IndexableByKey" Bool="false" />
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
       <Annotations Target="microsoft.graph.driveItem/workbook">
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
