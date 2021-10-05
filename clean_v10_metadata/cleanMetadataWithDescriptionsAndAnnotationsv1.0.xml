@@ -6765,7 +6765,7 @@
         <NavigationProperty Name="listItem" Type="graph.listItem" ContainsTarget="true" />
         <NavigationProperty Name="permission" Type="graph.permission" ContainsTarget="true" />
         <NavigationProperty Name="root" Type="graph.driveItem" />
-        <NavigationProperty Name="site" Type="graph.site" />
+        <NavigationProperty Name="site" Type="graph.site" ContainsTarget="true" />
       </EntityType>
       <ComplexType Name="extensionSchemaProperty">
         <Property Name="name" Type="Edm.String" />
