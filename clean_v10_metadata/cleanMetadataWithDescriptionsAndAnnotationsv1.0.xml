@@ -15769,6 +15769,7 @@
         <Parameter Name="endDateTime" Type="Edm.DateTimeOffset" />
       </Action>
       <EntityContainer Name="GraphService">
+        <EntitySet Name="workbooks" EntityType="microsoft.graph.driveItem" />
         <EntitySet Name="invitations" EntityType="microsoft.graph.invitation">
           <NavigationPropertyBinding Path="invitedUser" Target="users" />
         </EntitySet>
