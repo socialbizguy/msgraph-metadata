@@ -301,6 +301,11 @@
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='sectionGroup']/edm:NavigationProperty[@Name='parentNotebook']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='itemActivityOLD']/edm:NavigationProperty[@Name='driveItem']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='itemActivity']/edm:NavigationProperty[@Name='driveItem']/@ContainsTarget|
+                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='following']/@ContainsTarget|
+                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='activities']/@ContainsTarget|
+                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='list']/edm:NavigationProperty[@Name='activities']/@ContainsTarget|
+                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='driveItem']/edm:NavigationProperty[@Name='activities']/@ContainsTarget|
+                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='listItem']/edm:NavigationProperty[@Name='activities']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='accessPackage']/edm:NavigationProperty[@Name='incompatibleGroups']/@ContainsTarget">
         <xsl:apply-templates select="@* | node()"/>
     </xsl:template>
@@ -571,6 +576,84 @@
           </xsl:element>
         </xsl:element>
       </xsl:element>
+      <!-- Remove indexability for activities navigation property -->
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.list/activities</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.NavigationRestrictions</xsl:attribute>
+          <xsl:element name="Record" namespace="{namespace-uri()}">
+            <xsl:element name="PropertyValue">
+              <xsl:attribute name="Property">RestrictedProperties</xsl:attribute>
+              <xsl:element name="Collection">
+                <xsl:element name="Record">
+                  <xsl:element name="PropertyValue">
+                    <xsl:attribute name="Property">IndexableByKey</xsl:attribute>
+                    <xsl:attribute name="Bool">false</xsl:attribute>
+                  </xsl:element>
+                </xsl:element>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.listItem/activities</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.NavigationRestrictions</xsl:attribute>
+          <xsl:element name="Record" namespace="{namespace-uri()}">
+            <xsl:element name="PropertyValue">
+              <xsl:attribute name="Property">RestrictedProperties</xsl:attribute>
+              <xsl:element name="Collection">
+                <xsl:element name="Record">
+                  <xsl:element name="PropertyValue">
+                    <xsl:attribute name="Property">IndexableByKey</xsl:attribute>
+                    <xsl:attribute name="Bool">false</xsl:attribute>
+                  </xsl:element>
+                </xsl:element>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.drive/activities</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.NavigationRestrictions</xsl:attribute>
+          <xsl:element name="Record" namespace="{namespace-uri()}">
+            <xsl:element name="PropertyValue">
+              <xsl:attribute name="Property">RestrictedProperties</xsl:attribute>
+              <xsl:element name="Collection">
+                <xsl:element name="Record">
+                  <xsl:element name="PropertyValue">
+                    <xsl:attribute name="Property">IndexableByKey</xsl:attribute>
+                    <xsl:attribute name="Bool">false</xsl:attribute>
+                  </xsl:element>
+                </xsl:element>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.driveItem/activities</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.NavigationRestrictions</xsl:attribute>
+          <xsl:element name="Record" namespace="{namespace-uri()}">
+            <xsl:element name="PropertyValue">
+              <xsl:attribute name="Property">RestrictedProperties</xsl:attribute>
+              <xsl:element name="Collection">
+                <xsl:element name="Record">
+                  <xsl:element name="PropertyValue">
+                    <xsl:attribute name="Property">IndexableByKey</xsl:attribute>
+                    <xsl:attribute name="Bool">false</xsl:attribute>
+                  </xsl:element>
+                </xsl:element>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+        </xsl:element>
+      </xsl:element>
+
       <!-- Set false indexabilities for:
            microsoft.graph.user/drive | microsoft.graph.group/drive | microsoft.graph.sharedDriveItem/site
            These will restrict expanding these containment navigation properties.

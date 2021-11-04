@@ -3908,7 +3908,7 @@
         <Property Name="sharePointIds" Type="graph.sharepointIds" />
         <Property Name="system" Type="graph.systemFacet" />
         <NavigationProperty Name="bundles" Type="Collection(graph.driveItem)" ContainsTarget="true" />
-        <NavigationProperty Name="following" Type="Collection(graph.driveItem)" ContainsTarget="true" />
+        <NavigationProperty Name="following" Type="Collection(graph.driveItem)" />
         <NavigationProperty Name="items" Type="Collection(graph.driveItem)" ContainsTarget="true" />
         <NavigationProperty Name="list" Type="graph.list" ContainsTarget="true" />
         <NavigationProperty Name="root" Type="graph.driveItem" ContainsTarget="true" />
@@ -27210,6 +27210,58 @@
         </Annotation>
       </Annotations>
       <Annotations Target="microsoft.graph.managedDevice/users">
+        <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
+          <Record>
+            <PropertyValue Property="RestrictedProperties">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="IndexableByKey" Bool="false" />
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.list/activities">
+        <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
+          <Record>
+            <PropertyValue Property="RestrictedProperties">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="IndexableByKey" Bool="false" />
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.listItem/activities">
+        <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
+          <Record>
+            <PropertyValue Property="RestrictedProperties">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="IndexableByKey" Bool="false" />
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.drive/activities">
+        <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
+          <Record>
+            <PropertyValue Property="RestrictedProperties">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="IndexableByKey" Bool="false" />
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.driveItem/activities">
         <Annotation Term="Org.OData.Capabilities.V1.NavigationRestrictions">
           <Record>
             <PropertyValue Property="RestrictedProperties">
