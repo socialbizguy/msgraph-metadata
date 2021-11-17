@@ -281,7 +281,9 @@
 
     <!-- Remove ContainsTarget -->
     <xsl:template match="edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='group']/edm:NavigationProperty[@Name='acceptedSenders']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='group']/edm:NavigationProperty[@Name='rejectedSenders']/@ContainsTarget">
+                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='group']/edm:NavigationProperty[@Name='rejectedSenders']/@ContainsTarget|
+                         edm:Schema[@Namespace='microsoft.graph']/edm:ComplexType[@Name='userFlowApiConnectorConfiguration']/edm:NavigationProperty[@Name='postAttributeCollection']/@ContainsTarget|
+                         edm:Schema[@Namespace='microsoft.graph']/edm:ComplexType[@Name='userFlowApiConnectorConfiguration']/edm:NavigationProperty[@Name='postFederationSignup']/@ContainsTarget">
         <xsl:apply-templates select="@* | node()"/>
     </xsl:template>
 
