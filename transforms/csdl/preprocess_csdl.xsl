@@ -486,7 +486,8 @@
                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityContainer[@Name='GraphService']/edm:EntitySet[@Name='administrativeUnits']|
                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityContainer[@Name='GraphService']/edm:EntitySet[@Name='contacts']|
                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityContainer[@Name='GraphService']/edm:EntitySet[@Name='directoryObjects']|
-                       edm:Schema[@Namespace='microsoft.graph']/edm:EntityContainer[@Name='GraphService']/edm:EntitySet[@Name='devices']">
+                       edm:Schema[@Namespace='microsoft.graph']/edm:EntityContainer[@Name='GraphService']/edm:EntitySet[@Name='devices']|
+                       edm:Schema[@Namespace='microsoft.graph']/edm:EntityContainer[@Name='GraphService']/edm:EntitySet[@Name='orgContact']">
     <xsl:copy>
       <xsl:apply-templates select="@* | node()"/>
       <xsl:element name="Annotation">
@@ -613,6 +614,210 @@
               </xsl:element>
             </xsl:element>
           </xsl:element>
+        </xsl:element>
+      </xsl:element>
+      <!-- Add consistency level header to targeted navigation properties of AAD entities -->
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.administrativeUnit/members</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.application/owners</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.device/memberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.device/transitiveMemberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.device/registeredUsers</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.device/registeredOwners</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.group/members</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.group/transitiveMembers</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.group/memberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.group/transitiveMemberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.group/owners</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.group/appRoleAssignments</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.orgContact/memberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.orgContact/transitiveMemberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.servicePrincipal/memberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.servicePrincipal/transitiveMemberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.servicePrincipal/appRoleAssignments</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.servicePrincipal/appRoleAssignedTo</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.servicePrincipal/oauth2PermissionGrants</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/memberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/transitiveMemberOf</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/ownedObjects</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/registeredDevices</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/ownedDevices</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/manager</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/directReports</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/transitiveReports</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/appRoleAssignments</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="Annotations">
+        <xsl:attribute name="Target">microsoft.graph.user/oauth2PermissionGrants</xsl:attribute>
+        <xsl:element name="Annotation">
+          <xsl:attribute name="Term">Org.OData.Capabilities.V1.ReadRestrictions</xsl:attribute>
+          <xsl:call-template name="ConsistencyLevelHeaderTemplate"/>
         </xsl:element>
       </xsl:element>
     </xsl:copy>

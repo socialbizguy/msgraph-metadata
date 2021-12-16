@@ -416,6 +416,702 @@
           </Record>
         </Annotation>
       </Annotations>
+      <Annotations Target="microsoft.graph.administrativeUnit/members">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.application/owners">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.device/memberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.device/transitiveMemberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.device/registeredUsers">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.device/registeredOwners">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.group/members">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.group/transitiveMembers">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.group/memberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.group/transitiveMemberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.group/owners">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.group/appRoleAssignments">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.orgContact/memberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.orgContact/transitiveMemberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.servicePrincipal/memberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.servicePrincipal/transitiveMemberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.servicePrincipal/appRoleAssignments">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.servicePrincipal/appRoleAssignedTo">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.servicePrincipal/oauth2PermissionGrants">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/memberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/transitiveMemberOf">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/ownedObjects">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/registeredDevices">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/ownedDevices">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/manager">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/directReports">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/transitiveReports">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/appRoleAssignments">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="microsoft.graph.user/oauth2PermissionGrants">
+        <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+          <Record>
+            <PropertyValue Property="CustomHeaders">
+              <Collection>
+                <Record>
+                  <PropertyValue Property="Name" String="ConsistencyLevel" />
+                  <PropertyValue Property="Description" String="Indicates the requested consistency level." />
+                  <PropertyValue Property="DocumentationURL" String="https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/" />
+                  <PropertyValue Property="Required" Bool="false" />
+                  <PropertyValue Property="ExampleValues">
+                    <Collection>
+                      <Record>
+                        <PropertyValue Property="Value" String="eventual" />
+                        <PropertyValue Property="Description" String="$search and $count queries require the client to set the ConsistencyLevel HTTP header to 'eventual'." />
+                      </Record>
+                    </Collection>
+                  </PropertyValue>
+                </Record>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </Annotation>
+      </Annotations>
     </Schema>
     <Schema Namespace="microsoft.graph.callRecords" xmlns="http://docs.oasis-open.org/odata/ns/edm">
       <EnumType Name="callType">

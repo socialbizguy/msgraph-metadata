@@ -17,7 +17,7 @@ function Get-PathWithPrefix([string]$requestedPath) {
     if([System.IO.Path]::IsPathRooted($requestedPath)) {
         return $requestedPath
     } else {
-        return Join-Path $PWD $requestedPath
+        return Join-Path $PSScriptRoot $requestedPath
     }
 }
 $xslFullPath = Get-PathWithPrefix -requestedPath $xslPath
@@ -42,11 +42,14 @@ $xmlWriterSettings.Indent = $true
 
 $xmlWriter = [System.Xml.XmlWriter]::Create($outputFullPath, $xmlWriterSettings)
 
-$xslt = [System.Xml.Xsl.XslCompiledTransform]::new($dbg) 
+$xslt = [System.Xml.Xsl.XslCompiledTransform]::new($dbg)
 $xslt.Load($xslFullPath)
 try {
     $xslt.Transform($inputFullPath, $xsltargs, $xmlWriter)
 }
 catch {
     Write-Error $_.Exception
+}
+finally {
+    $xmlWriter.Dispose()
 }
