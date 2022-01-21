@@ -37,6 +37,7 @@
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='deviceManagementAbstractComplexSettingInstance']/edm:NavigationProperty[@Name='value']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='deviceManagementCollectionSettingInstance']/edm:NavigationProperty[@Name='value']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='deviceManagementComplexSettingInstance']/edm:NavigationProperty[@Name='value']|
+                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='deviceManagementComplianceScheduledActionForRule']/edm:NavigationProperty[@Name='scheduledActionConfigurations']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='groupPolicyUploadedDefinitionFile']/edm:NavigationProperty[@Name='groupPolicyOperations']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='iosEnterpriseWiFiConfiguration']/edm:NavigationProperty[@Name='rootCertificatesForServerValidation']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='iosImportedPFXCertificateProfile']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
@@ -50,7 +51,6 @@
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='onPremisesAgent']/edm:NavigationProperty[@Name='agentGroups']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='onPremisesAgentGroup']/edm:NavigationProperty[@Name='agents']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='onPremisesAgentGroup']/edm:NavigationProperty[@Name='publishedResources']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='onPremisesPublishingProfile']/edm:NavigationProperty[@Name='agents']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='plannerBucket']/edm:NavigationProperty[@Name='tasks']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='plannerGroup']/edm:NavigationProperty[@Name='plans']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='plannerPlan']/edm:NavigationProperty[@Name='buckets']|
@@ -58,15 +58,9 @@
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='plannerUser']/edm:NavigationProperty[@Name='all']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='plannerUser']/edm:NavigationProperty[@Name='plans']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='plannerUser']/edm:NavigationProperty[@Name='tasks']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='printJob']/edm:NavigationProperty[@Name='documents']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='printJob']/edm:NavigationProperty[@Name='tasks']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='printService']/edm:NavigationProperty[@Name='endpoints']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='printer']/edm:NavigationProperty[@Name='allowedGroups']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='printer']/edm:NavigationProperty[@Name='allowedUsers']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='publishedResource']/edm:NavigationProperty[@Name='agentGroups']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='teamsApp']/edm:NavigationProperty[@Name='appDefinitions']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='securityConfigurationTask']/edm:NavigationProperty[@Name='managedDevices']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windows10CertificateProfileBase']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windows10ImportedPFXCertificateProfile']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windows10PkcsCertificateProfile']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windows81SCEPCertificateProfile']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
@@ -74,7 +68,7 @@
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windowsPhone81SCEPCertificateProfile']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windowsUniversalAppX']/edm:NavigationProperty[@Name='committedContainedApps']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windowsWifiEnterpriseEAPConfiguration']/edm:NavigationProperty[@Name='rootCertificatesForServerValidation']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='cloudPcProvisioningPolicy']/edm:NavigationProperty[@Name='assignments']
+                  edm:Schema[@Namespace='microsoft.graph.managedTenants']/edm:EntityType[@Name='managementTemplateStepVersion']/edm:NavigationProperty[@Name='deployments']
                          ">
       <!-- Didn't add the rule for teamsAppDefinition and unifiedRoleDefinition since it doesn't
            look like we applied it, and I don't see any issues because of it.
@@ -286,8 +280,12 @@
     </xsl:template>
 
     <!-- Remove ContainsTarget -->
-    <xsl:template match="edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='group']/edm:NavigationProperty[@Name='acceptedSenders']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='group']/edm:NavigationProperty[@Name='rejectedSenders']/@ContainsTarget|
+    <xsl:template match="edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='group']/edm:NavigationProperty[@Name='acceptedSenders']/@ContainsTarget">
+        <xsl:apply-templates select="@* | node()"/>
+    </xsl:template>
+
+    <!-- Remove ContainsTarget for PowerShell-bound metadata with capability annotations -->
+        <xsl:template match="edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='group']/edm:NavigationProperty[@Name='rejectedSenders']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='channel']/edm:NavigationProperty[@Name='filesFolder']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='listItem']/edm:NavigationProperty[@Name='driveItem']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='sharedDriveItem']/edm:NavigationProperty[@Name='driveItem']/@ContainsTarget|
@@ -297,18 +295,15 @@
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='site']/edm:NavigationProperty[@Name='drives']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='list']/edm:NavigationProperty[@Name='drive']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='onenotePage']/edm:NavigationProperty[@Name='parentNotebook']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='onenoteSection']/edm:NavigationProperty[@Name='parentNotebook']/@ContainsTarget|
+                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='onenoteSection']/edm:NavigationProperty[@Name='parentNotebook']/@ContainsTarget|                         
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='sectionGroup']/edm:NavigationProperty[@Name='parentNotebook']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='itemActivityOLD']/edm:NavigationProperty[@Name='driveItem']/@ContainsTarget|
                          edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='itemActivity']/edm:NavigationProperty[@Name='driveItem']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='following']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='activities']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='list']/edm:NavigationProperty[@Name='activities']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='driveItem']/edm:NavigationProperty[@Name='activities']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='listItem']/edm:NavigationProperty[@Name='activities']/@ContainsTarget|
-                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='accessPackage']/edm:NavigationProperty[@Name='incompatibleGroups']/@ContainsTarget">
-        <xsl:apply-templates select="@* | node()"/>
-    </xsl:template>
+                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='accessPackage']/edm:NavigationProperty[@Name='incompatibleGroups']/@ContainsTarget">             
+                <xsl:if test="$remove-capability-annotations='True'">
+                    <xsl:attribute name="ContainsTarget">true</xsl:attribute>
+                </xsl:if>
+        </xsl:template>    
 
     <!--Remove functions that are blocking beta generation-->
     <xsl:template match="edm:Schema[@Namespace='microsoft.graph.callRecords']/edm:Function[@Name='getPstnCalls']"/>
@@ -520,6 +515,8 @@
       </xsl:element>
     </xsl:copy>
   </xsl:template>
+
+  <!-- Add Navigation Restrictions Annotations -->
   <xsl:template match="edm:Schema[@Namespace='microsoft.graph']">
     <xsl:copy>
       <xsl:apply-templates select="@* | node()"/>
@@ -576,84 +573,6 @@
           </xsl:element>
         </xsl:element>
       </xsl:element>
-      <!-- Remove indexability for activities navigation property -->
-      <xsl:element name="Annotations">
-        <xsl:attribute name="Target">microsoft.graph.list/activities</xsl:attribute>
-        <xsl:element name="Annotation">
-          <xsl:attribute name="Term">Org.OData.Capabilities.V1.NavigationRestrictions</xsl:attribute>
-          <xsl:element name="Record" namespace="{namespace-uri()}">
-            <xsl:element name="PropertyValue">
-              <xsl:attribute name="Property">RestrictedProperties</xsl:attribute>
-              <xsl:element name="Collection">
-                <xsl:element name="Record">
-                  <xsl:element name="PropertyValue">
-                    <xsl:attribute name="Property">IndexableByKey</xsl:attribute>
-                    <xsl:attribute name="Bool">false</xsl:attribute>
-                  </xsl:element>
-                </xsl:element>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-        </xsl:element>
-      </xsl:element>
-      <xsl:element name="Annotations">
-        <xsl:attribute name="Target">microsoft.graph.listItem/activities</xsl:attribute>
-        <xsl:element name="Annotation">
-          <xsl:attribute name="Term">Org.OData.Capabilities.V1.NavigationRestrictions</xsl:attribute>
-          <xsl:element name="Record" namespace="{namespace-uri()}">
-            <xsl:element name="PropertyValue">
-              <xsl:attribute name="Property">RestrictedProperties</xsl:attribute>
-              <xsl:element name="Collection">
-                <xsl:element name="Record">
-                  <xsl:element name="PropertyValue">
-                    <xsl:attribute name="Property">IndexableByKey</xsl:attribute>
-                    <xsl:attribute name="Bool">false</xsl:attribute>
-                  </xsl:element>
-                </xsl:element>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-        </xsl:element>
-      </xsl:element>
-      <xsl:element name="Annotations">
-        <xsl:attribute name="Target">microsoft.graph.drive/activities</xsl:attribute>
-        <xsl:element name="Annotation">
-          <xsl:attribute name="Term">Org.OData.Capabilities.V1.NavigationRestrictions</xsl:attribute>
-          <xsl:element name="Record" namespace="{namespace-uri()}">
-            <xsl:element name="PropertyValue">
-              <xsl:attribute name="Property">RestrictedProperties</xsl:attribute>
-              <xsl:element name="Collection">
-                <xsl:element name="Record">
-                  <xsl:element name="PropertyValue">
-                    <xsl:attribute name="Property">IndexableByKey</xsl:attribute>
-                    <xsl:attribute name="Bool">false</xsl:attribute>
-                  </xsl:element>
-                </xsl:element>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-        </xsl:element>
-      </xsl:element>
-      <xsl:element name="Annotations">
-        <xsl:attribute name="Target">microsoft.graph.driveItem/activities</xsl:attribute>
-        <xsl:element name="Annotation">
-          <xsl:attribute name="Term">Org.OData.Capabilities.V1.NavigationRestrictions</xsl:attribute>
-          <xsl:element name="Record" namespace="{namespace-uri()}">
-            <xsl:element name="PropertyValue">
-              <xsl:attribute name="Property">RestrictedProperties</xsl:attribute>
-              <xsl:element name="Collection">
-                <xsl:element name="Record">
-                  <xsl:element name="PropertyValue">
-                    <xsl:attribute name="Property">IndexableByKey</xsl:attribute>
-                    <xsl:attribute name="Bool">false</xsl:attribute>
-                  </xsl:element>
-                </xsl:element>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-        </xsl:element>
-      </xsl:element>
-
       <!-- Set false indexabilities for:
            microsoft.graph.user/drive | microsoft.graph.group/drive | microsoft.graph.sharedDriveItem/site
            These will restrict expanding these containment navigation properties.
@@ -735,5 +654,4 @@
       <xsl:apply-templates select="node()"/>
     </xsl:copy>
   </xsl:template>
-
 </xsl:stylesheet>
