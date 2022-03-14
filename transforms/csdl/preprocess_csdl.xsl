@@ -325,9 +325,9 @@
                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='governanceRoleDefinition']/edm:NavigationProperty[@Name='resource']/@ContainsTarget|
                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='governanceRoleDefinition']/edm:NavigationProperty[@Name='roleSetting']/@ContainsTarget|
                         edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='governanceRoleAssignment']/edm:NavigationProperty[@Name='resource']/@ContainsTarget|
-                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='bundles']|
-                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='following']|
-                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='special']">
+                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='bundles']/@ContainsTarget|
+                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='following']/@ContainsTarget|
+                        edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='drive']/edm:NavigationProperty[@Name='special']/@ContainsTarget">
         <xsl:if test="$remove-capability-annotations='True'">
             <xsl:attribute name="ContainsTarget">true</xsl:attribute>
         </xsl:if>
