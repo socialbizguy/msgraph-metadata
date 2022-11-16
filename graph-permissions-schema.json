@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema",
     "title": "Schema for OAuth Permissions",
     "type": "object",
     "properties": {
@@ -121,13 +121,13 @@
                         }
                     }
                 },
-                "includeProperties": {
+                "includedProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "excludeProperties": {
+                "excludedProperties": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -136,7 +136,7 @@
             }
         },
         "path": {
-            "type": "string",
+            "type": "string"
         },
         "scheme": {
             "type": "object",
