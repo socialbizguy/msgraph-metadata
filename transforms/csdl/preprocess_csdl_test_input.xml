@@ -296,12 +296,6 @@
             <EntityType Name="certificateBasedAuthConfiguration" BaseType="graph.entity">
                 <Property Name="certificateAuthorities" Type="Collection(graph.certificateAuthority)" Nullable="false" />
             </EntityType>
-            <EntityType Name="virtualEventRegistration" BaseType="graph.entity">
-                <Property Name="capacity" Type="Edm.Int32" />
-                <Property Name="registrationWebUrl" Type="Edm.String" />
-                <NavigationProperty Name="questions" Type="Collection(graph.virtualEventRegistrationQuestion)" />
-                <NavigationProperty Name="registrants" Type="Collection(graph.virtualEventRegistrant)" />
-            </EntityType>
             <EntityType Name="training" BaseType="graph.entity">
                 <Property Name="description" Type="Edm.String" />
                 <Property Name="displayName" Type="Edm.String" />
@@ -319,6 +313,11 @@
             <EntityType Name="b2xIdentityUserFlow" BaseType="graph.identityUserFlow">
                 <Property Name="apiConnectorConfiguration" Type="graph.userFlowApiConnectorConfiguration" />
                 <NavigationProperty Name="identityProviders" Type="Collection(graph.identityProvider)" />                
+            </EntityType>
+            <EntityType Name="virtualEventRegistrationConfiguration" BaseType="graph.entity">
+                <Property Name="capacity" Type="Edm.Int32" />
+                <Property Name="registrationWebUrl" Type="Edm.String" />
+                <NavigationProperty Name="questions" Type="Collection(graph.virtualEventRegistrationQuestion)" />
             </EntityType>
             <ComplexType Name="certificateAuthority">
                 <Property Name="certificate" Type="Edm.Binary" Nullable="false" />

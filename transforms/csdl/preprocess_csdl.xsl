@@ -86,8 +86,7 @@
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='securityConfigurationTask']/edm:NavigationProperty[@Name='managedDevices']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='teamTemplate']/edm:NavigationProperty[@Name='definitions']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='training']/edm:NavigationProperty[@Name='languageDetails']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='virtualEventRegistration']/edm:NavigationProperty[@Name='questions']|
-                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='virtualEventRegistration']/edm:NavigationProperty[@Name='registrants']|
+                  edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='virtualEventRegistrationConfiguration']/edm:NavigationProperty[@Name='questions']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windows10ImportedPFXCertificateProfile']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windows10PkcsCertificateProfile']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
                   edm:Schema[@Namespace='microsoft.graph']/edm:EntityType[@Name='windows81SCEPCertificateProfile']/edm:NavigationProperty[@Name='managedDeviceCertificateStates']|
